@@ -1,8 +1,25 @@
-# TextFSM JavaScript [tfsm.js]
+## Project Structure
 
-A JavaScript port of the Python TextFSM library for parsing semi-structured text through template files.
+```
+tfsmjs/
+├── tfsm-node.js            # Node.js implementation
+├── tfsm.js                 # Browser implementation
+├── templates/              # TextFSM template files
+│   └── cisco_ios_*.textfsm # Cisco IOS templates
+├── tests/                  # Test files
+│   └── cisco_ios/          # Test data for Cisco IOS
+│       └── */              # Test directories by command
+│           ├── *.raw       # Raw device output
+│           └── *.yml       # Expected parse results
+├── batch-textfsm-tester.js # Batch testing script
+└── python-textfsm-tester.py # Python comparison tester
+```# TextFSM JavaScript
+
+A JavaScript port of the [Python TextFSM](https://github.com/google/textfsm) library for parsing semi-structured text through template files.
 
 *This project is a JavaScript implementation of [TextFSM](https://github.com/google/textfsm) originally developed by Google. Test data and templates are from [NTC-Templates](https://github.com/networktocode/ntc-templates).*
+
+**Repository**: [https://github.com/scottpeterman/tfsmjs](https://github.com/scottpeterman/tfsmjs)
 
 ## Overview
 
@@ -20,8 +37,28 @@ This implementation achieves over 92% compatibility with the original Python lib
 
 ## Installation
 
+Since this package is not yet available on npm, you can install it directly from GitHub:
+
 ```bash
-npm install textfsm-js
+# Clone the repository
+git clone https://github.com/scottpeterman/tfsmjs.git
+
+# Navigate to the project directory
+cd tfsmjs
+
+# If you're using this in another project, you can link it or copy the necessary files
+```
+
+### Using in Your Project
+
+You can require the library directly from your local clone:
+
+```javascript
+// Node.js
+const { TextFSM } = require('./path/to/tfsmjs/tfsm-node.js');
+
+// Or import for browser/ES modules
+import { TextFSM } from './path/to/tfsmjs/tfsm.js';
 ```
 
 ## Usage Examples
