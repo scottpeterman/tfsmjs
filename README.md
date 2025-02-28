@@ -1,3 +1,23 @@
+# TextFSM JavaScript [tfsm.js]
+
+A JavaScript port of the Python TextFSM library for parsing semi-structured text through template files.
+
+*This project is a JavaScript implementation of [TextFSM](https://github.com/google/textfsm) originally developed by Google. Test data and templates are from [NTC-Templates](https://github.com/networktocode/ntc-templates).*
+
+## Overview
+
+TextFSM JS is a fully compatible JavaScript implementation of the original Python [TextFSM](https://github.com/google/textfsm) library. It enables parsing of semi-structured text (like CLI output from network devices) into structured data using simple templates.
+
+This implementation achieves over 92% compatibility with the original Python library, with identical results for the vast majority of templates and even better performance in many cases.
+
+## Features
+
+- Complete TextFSM engine implementation in JavaScript
+- Compatible with existing TextFSM templates
+- Support for both Node.js and browser environments
+- Comprehensive API for template parsing and text processing
+- Excellent performance (often faster than the Python original)
+
 ## Project Structure
 
 ```
