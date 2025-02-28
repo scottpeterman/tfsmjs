@@ -1,0 +1,67 @@
+---
+parsed_sample:
+  - destination_address: "0002.d180.67fb"
+    destination_port:
+      - "Port-channel15"
+    type: "dynamic"
+    vlan_id: "10"
+  - destination_address: "0012.e160.12ad"
+    destination_port:
+      - "Port-channel15"
+    type: "dynamic"
+    vlan_id: "10"
+  - destination_address: "0012.b67e.1212"
+    destination_port:
+      - "GigabitEthernet0/48"
+    type: "dynamic"
+    vlan_id: "10"
+  - destination_address: "0012.12da.1212"
+    destination_port:
+      - "GigabitEthernet0/44"
+    type: "dynamic"
+    vlan_id: "10"
+  - destination_address: "1212.1263.1212"
+    destination_port:
+      - "GigabitEthernet0/42"
+    type: "dynamic"
+    vlan_id: "10"
+  - destination_address: "1313.1212.1234"
+    destination_port:
+      - "GigabitEthernet0/37"
+    type: "dynamic"
+    vlan_id: "10"
+  - destination_address: "1212.1281.1313"
+    destination_port:
+      - "Port-channel82"
+    type: "dynamic"
+    vlan_id: "10"
+  - destination_address: "1234.5678.abcd"
+    destination_port:
+      - "Port-channel100"
+    type: "dynamic"
+    vlan_id: "10"
+  - destination_address: "abcd.efab.8641"
+    destination_port:
+      - "GigabitEthernet0/37"
+    type: "dynamic"
+    vlan_id: "10"
+  - destination_address: "dcba.beef.1236"
+    destination_port:
+      - "GigabitEthernet0/39"
+    type: "dynamic"
+    vlan_id: "10"
+  - destination_address: "6789.feed.abc1"
+    destination_port:
+      - "GigabitEthernet0/44"
+    type: "dynamic"
+    vlan_id: "10"
+  - destination_address: "5421.1222.9988"
+    destination_port:
+      - "GigabitEthernet0/48"
+    type: "dynamic"
+    vlan_id: "2099"
+  - destination_address: "deed.feed.fabd"
+    destination_port:
+      - "Switch"
+    type: "static"
+    vlan_id: "2099"

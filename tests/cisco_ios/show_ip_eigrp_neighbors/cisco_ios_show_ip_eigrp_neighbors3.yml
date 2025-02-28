@@ -1,0 +1,11 @@
+---
+parsed_sample:
+  - as: "535"
+    hold: "10"
+    interface: "Vl250"
+    ip_address: "10.120.250.1"
+    q_cnt: "0"
+    rto: "450"
+    seq_num: "17091"
+    srtt: "3"
+    uptime: "1w0d"

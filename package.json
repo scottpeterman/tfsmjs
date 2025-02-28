@@ -1,0 +1,19 @@
+{
+  "name": "tfsmjs",
+  "version": "1.0.0",
+  "description": "JavaScript implementation of TextFSM",
+  "main": "tfsm-node.js",
+  "scripts": {
+    "test": "node test-node.js",
+    "benchmark": "node benchmark-simple.js"
+  },
+  "keywords": [
+    "textfsm",
+    "parser"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}

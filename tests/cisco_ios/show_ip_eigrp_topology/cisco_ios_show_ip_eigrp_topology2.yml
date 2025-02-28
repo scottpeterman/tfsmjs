@@ -1,0 +1,115 @@
+---
+parsed_sample:
+  - adv_fd: []
+    adv_rd: []
+    adv_router:
+      - "Connected"
+    code: "P"
+    fd: "128256"
+    network: "172.16.0.1"
+    out_interface:
+      - "Loopback0"
+    prefix_length: "32"
+    process_id: "1"
+    router_id: "172.16.0.1"
+    source: ""
+    successors: "1"
+    tag: ""
+  - adv_fd:
+      - "130816"
+    adv_rd:
+      - "128256"
+    adv_router:
+      - "192.168.100.1"
+    code: "P"
+    fd: "130816"
+    network: "172.16.0.2"
+    out_interface:
+      - "GigabitEthernet0/0"
+    prefix_length: "32"
+    process_id: "1"
+    router_id: "172.16.0.1"
+    source: ""
+    successors: "1"
+    tag: ""
+  - adv_fd:
+      - "3072"
+    adv_rd:
+      - "2816"
+    adv_router:
+      - "192.168.100.1"
+    code: "P"
+    fd: "3072"
+    network: "10.2.2.0"
+    out_interface:
+      - "GigabitEthernet0/0"
+    prefix_length: "24"
+    process_id: "1"
+    router_id: "172.16.0.1"
+    source: ""
+    successors: "1"
+    tag: ""
+  - adv_fd:
+      - "3072"
+    adv_rd:
+      - "2816"
+    adv_router:
+      - "192.168.100.1"
+    code: "P"
+    fd: "3072"
+    network: "192.168.100.4"
+    out_interface:
+      - "GigabitEthernet0/0"
+    prefix_length: "31"
+    process_id: "1"
+    router_id: "172.16.0.1"
+    source: ""
+    successors: "1"
+    tag: ""
+  - adv_fd: []
+    adv_rd: []
+    adv_router:
+      - "Connected"
+    code: "P"
+    fd: "2816"
+    network: "192.168.100.0"
+    out_interface:
+      - "GigabitEthernet0/0"
+    prefix_length: "31"
+    process_id: "1"
+    router_id: "172.16.0.1"
+    source: ""
+    successors: "1"
+    tag: ""
+  - adv_fd: []
+    adv_rd: []
+    adv_router:
+      - "Connected"
+    code: "P"
+    fd: "2816"
+    network: "192.168.100.2"
+    out_interface:
+      - "GigabitEthernet0/1"
+    prefix_length: "31"
+    process_id: "1"
+    router_id: "172.16.0.1"
+    source: ""
+    successors: "1"
+    tag: ""
+  - adv_fd:
+      - "3072"
+    adv_rd:
+      - "2816"
+    adv_router:
+      - "192.168.100.1"
+    code: "P"
+    fd: "3072"
+    network: "192.168.100.6"
+    out_interface:
+      - "GigabitEthernet0/0"
+    prefix_length: "31"
+    process_id: "1"
+    router_id: "172.16.0.1"
+    source: ""
+    successors: "1"
+    tag: ""

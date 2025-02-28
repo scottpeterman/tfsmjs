@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextFSM JavaScript Tester (Simplified)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .text-area-container {
+            display: flex;
+            gap: 20px;
+            height: 300px;
+        }
+        .textarea-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        textarea {
+            flex-grow: 1;
+            padding: 10px;
+            font-family: monospace;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: none;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        button.clear {
+            background-color: #f44336;
+        }
+        button.clear:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <h1>TextFSM JavaScript Tester (Simplified)</h1>
+
+    <div class="container">
+        <div class="text-area-container">
+            <div class="textarea-group">
+                <label for="template">Template:</label>
+                <textarea id="template" placeholder="Enter TextFSM template here...">Value Interface (\S+/\d)
+Value Status (up|down)
+Value Protocol (up|down)
+
+Start
+  ^${Interface}\s+${Status}\s+${Protocol} -> Record</textarea>
+            </div>
+
+            <div class="textarea-group">
+                <label for="text">Input Text:</label>
+                <textarea id="text" placeholder="Enter text to parse here...">Interface    Status    Protocol
+Gig0/1       up        up
+Gig0/2       down      down
+Gig0/3       up        up</textarea>
+            </div>
+
+            <div class="textarea-group">
+                <label for="result">Result:</label>
+                <textarea id="result" readonly></textarea>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button id="parse" type="button">Parse Text</button>
+            <button id="parse-dict" type="button">Parse to Dictionary</button>
+            <button class="clear" id="clear" type="button">Clear All</button>
+        </div>
+    </div>
+
+    <!-- Load the TextFSM library -->
+    <script type="text/javascript" src="tfsm.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const templateTextarea = document.getElementById('template');
+            const textTextarea = document.getElementById('text');
+            const resultTextarea = document.getElementById('result');
+            const parseButton = document.getElementById('parse');
+            const parseDictButton = document.getElementById('parse-dict');
+            const clearButton = document.getElementById('clear');
+
+            // Parse text
+            parseButton.addEventListener('click', function() {
+                const template = templateTextarea.value;
+                const text = textTextarea.value;
+
+                if (!template || !text) {
+                    resultTextarea.value = 'Please enter both template and text.';
+                    return;
+                }
+
+                try {
+                    resultTextarea.value = 'Processing...';
+
+                    // Fixed: Access the TextFSM constructor directly from the global TextFSMModule
+                    const fsm = new window.TextFSM.TextFSM(template);
+                    const results = fsm.parseText(text);
+
+                    // Format results
+                    let output = 'Header: ' + JSON.stringify(fsm.header) + '\n\n';
+                    output += 'Results:\n';
+
+                    results.forEach((row, index) => {
+                        output += `Row ${index + 1}: ${JSON.stringify(row)}\n`;
+                    });
+
+                    resultTextarea.value = output;
+                } catch (error) {
+                    resultTextarea.value = `Error: ${error.name}\n${error.message}\n\nStack trace:\n${error.stack}`;
+                    console.error(error);
+                }
+            });
+
+            // Parse to dictionary
+            parseDictButton.addEventListener('click', function() {
+                const template = templateTextarea.value;
+                const text = textTextarea.value;
+
+                if (!template || !text) {
+                    resultTextarea.value = 'Please enter both template and text.';
+                    return;
+                }
+
+                try {
+                    resultTextarea.value = 'Processing...';
+
+                    // Fixed: Access the TextFSM constructor directly from the global TextFSMModule
+                    const fsm = new window.TextFSM.TextFSM(template);
+                    const results = fsm.parseTextToDicts(text);
+
+                    // Format results
+                    let output = 'Results as dictionaries:\n\n';
+
+                    results.forEach((row, index) => {
+                        output += `Row ${index + 1}: ${JSON.stringify(row, null, 2)}\n\n`;
+                    });
+
+                    resultTextarea.value = output;
+                } catch (error) {
+                    resultTextarea.value = `Error: ${error.name}\n${error.message}\n\nStack trace:\n${error.stack}`;
+                    console.error(error);
+                }
+            });
+
+            // Clear all
+            clearButton.addEventListener('click', function() {
+                templateTextarea.value = '';
+                textTextarea.value = '';
+                resultTextarea.value = '';
+            });
+        });
+    </script>
+</body>
+</html>

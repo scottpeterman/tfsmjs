@@ -1,0 +1,14 @@
+---
+parsed_sample:
+  - inbound_acl: ""
+    interface: "Loopback1001"
+    ip_address:
+      - "10.0.0.0"
+    ip_helper: []
+    link_status: "up"
+    mtu: "1514"
+    outgoing_acl: ""
+    prefix_length:
+      - "32"
+    protocol_status: "up"
+    vrf: ""

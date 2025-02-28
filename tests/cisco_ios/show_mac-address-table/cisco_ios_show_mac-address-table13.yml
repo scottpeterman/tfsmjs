@@ -1,0 +1,32 @@
+---
+parsed_sample:
+  - destination_address: "0100.0ccc.cccc"
+    destination_port:
+      - "CPU"
+    type: "STATIC"
+    vlan_id: "All"
+  - destination_address: "ffff.ffff.ffff"
+    destination_port:
+      - "CPU"
+    type: "STATIC"
+    vlan_id: "All"
+  - destination_address: "28af.fd99.82c7"
+    destination_port:
+      - "Vl1"
+    type: "STATIC"
+    vlan_id: "1"
+  - destination_address: "0019.ab11.1111"
+    destination_port:
+      - "Gi1/1/1"
+    type: "DYNAMIC"
+    vlan_id: "87"
+  - destination_address: "12db.dbdb.1919"
+    destination_port:
+      - "Vl87"
+    type: "STATIC"
+    vlan_id: "87"
+  - destination_address: "1818.1818.1818"
+    destination_port:
+      - "Gi1/1/1"
+    type: "DYNAMIC"
+    vlan_id: "87"

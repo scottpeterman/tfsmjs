@@ -1,0 +1,35 @@
+---
+parsed_sample:
+  - details: ""
+    fqdn: ""
+    hop_num: "1"
+    ip_address: "10.180.133.121"
+    rtt_response:
+      - "1"
+  - details: ""
+    fqdn: ""
+    hop_num: "1"
+    ip_address: "10.180.133.125"
+    rtt_response:
+      - "1"
+  - details: ""
+    fqdn: ""
+    hop_num: "1"
+    ip_address: "10.180.133.121"
+    rtt_response:
+      - "0"
+  - details: ""
+    fqdn: ""
+    hop_num: "1"
+    ip_address: "10.180.133.125"
+    rtt_response:
+      - "2"
+  - details: ""
+    fqdn: ""
+    hop_num: "2"
+    ip_address: "10.180.133.177"
+    rtt_response:
+      - "1"
+      - "*"
+      - "2"
+      - "*"

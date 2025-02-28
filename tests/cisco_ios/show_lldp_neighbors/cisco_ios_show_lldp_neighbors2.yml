@@ -1,0 +1,6 @@
+---
+parsed_sample:
+  - capabilities: "R"
+    local_interface: "Gi0/2"
+    neighbor_interface: "Gi0/0"
+    neighbor_name: "long_name_swt.josh-v"

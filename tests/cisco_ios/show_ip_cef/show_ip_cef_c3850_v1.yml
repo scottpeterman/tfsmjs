@@ -1,0 +1,75 @@
+---
+parsed_sample:
+  - interface:
+      - "Vlan1"
+    ip_address: "0.0.0.0"
+    nexthop:
+      - "10.255.1.1"
+    prefix_length: "0"
+  - interface: []
+    ip_address: "0.0.0.0"
+    nexthop:
+      - "drop"
+    prefix_length: "8"
+  - interface: []
+    ip_address: "0.0.0.0"
+    nexthop:
+      - "receive"
+    prefix_length: "32"
+  - interface:
+      - "GigabitEthernet1/0/1"
+      - "GigabitEthernet1/0/2"
+    ip_address: "10.180.195.0"
+    nexthop:
+      - "10.180.101.5"
+      - "10.180.101.10"
+    prefix_length: "32"
+  - interface:
+      - "Vlan1"
+    ip_address: "10.255.1.0"
+    nexthop:
+      - "attached"
+    prefix_length: "24"
+  - interface:
+      - "Vlan1"
+    ip_address: "10.255.1.0"
+    nexthop:
+      - "receive"
+    prefix_length: "32"
+  - interface:
+      - "Port-channel1.1825"
+    ip_address: "10.255.255.192"
+    nexthop:
+      - "10.255.2.1"
+    prefix_length: "30"
+  - interface:
+      - "GigabitEthernet0/0/2.200"
+    ip_address: "10.255.200.0"
+    nexthop:
+      - "attached"
+    prefix_length: "24"
+  - interface: []
+    ip_address: "127.0.0.0"
+    nexthop:
+      - "drop"
+    prefix_length: "8"
+  - interface: []
+    ip_address: "224.0.0.0"
+    nexthop:
+      - "drop"
+    prefix_length: "4"
+  - interface: []
+    ip_address: "224.0.0.0"
+    nexthop:
+      - "receive"
+    prefix_length: "24"
+  - interface: []
+    ip_address: "240.0.0.0"
+    nexthop:
+      - "drop"
+    prefix_length: "4"
+  - interface: []
+    ip_address: "255.255.255.255"
+    nexthop:
+      - "receive"
+    prefix_length: "32"

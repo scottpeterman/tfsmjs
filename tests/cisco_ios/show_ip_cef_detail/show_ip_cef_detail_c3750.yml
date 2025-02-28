@@ -1,0 +1,62 @@
+---
+parsed_sample:
+  - interface:
+      - "Vlan1801"
+    ip_address: "0.0.0.0"
+    nexthop:
+      - "10.158.0.198"
+    prefix_length: "0"
+  - interface: []
+    ip_address: "0.0.0.0"
+    nexthop:
+      - "drop"
+    prefix_length: "8"
+  - interface: []
+    ip_address: "0.0.0.0"
+    nexthop:
+      - "receive"
+    prefix_length: "32"
+  - interface:
+      - "Vlan1801"
+    ip_address: "10.0.0.0"
+    nexthop:
+      - "10.158.0.198"
+    prefix_length: "16"
+  - interface:
+      - "Vlan1801"
+    ip_address: "10.158.0.192"
+    nexthop:
+      - "attached"
+    prefix_length: "29"
+  - interface:
+      - "Vlan1801"
+    ip_address: "10.158.0.192"
+    nexthop:
+      - "receive"
+    prefix_length: "32"
+  - interface:
+      - "Vlan1801"
+    ip_address: "10.158.0.195"
+    nexthop:
+      - "attached"
+    prefix_length: "32"
+  - interface: []
+    ip_address: "224.0.0.0"
+    nexthop:
+      - "drop"
+    prefix_length: "4"
+  - interface: []
+    ip_address: "224.0.0.0"
+    nexthop:
+      - "receive"
+    prefix_length: "24"
+  - interface: []
+    ip_address: "240.0.0.0"
+    nexthop:
+      - "drop"
+    prefix_length: "4"
+  - interface: []
+    ip_address: "255.255.255.255"
+    nexthop:
+      - "receive"
+    prefix_length: "32"

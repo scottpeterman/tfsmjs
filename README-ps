@@ -1,0 +1,8 @@
+Import-Module TextFSM.psm1
+$template = Get-Content -Path 'cisco_ios_show_capability.textfsm' -Raw
+$parser = New-TextFSMParser -TemplateContent $template
+$deviceOutput = Get-Content -Path 'device_output.txt' -Raw
+$results = ConvertFrom-TextFSM -InputText $deviceOutput -Parser $parser
+
+# Work with the structured data
+$results | Format-Table

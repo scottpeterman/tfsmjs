@@ -1,0 +1,15 @@
+---
+parsed_sample:
+  - destination: "192.168.0.1"
+    responders: []
+    response_stream:
+      - "....."
+    rtt_avg: "2"
+    rtt_max: "10"
+    rtt_min: "1"
+    sent_qty: "5"
+    sent_type: "100-byte ICMP Echos"
+    source: ""
+    success_pct: "0"
+    success_qty: "0"
+    timeout: "2"
